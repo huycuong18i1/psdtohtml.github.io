@@ -192,12 +192,19 @@ img {
 .feature__item {
   display: flex;
   align-items: center;
+  margin-bottom: 15rem;
+}
+.feature__item:nth-child(odd) .feature__info {
+  padding-left: 10rem;
+}
+.feature__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.feature__item:nth-child(even) .feature__info {
+  padding-right: 10rem;
 }
 .feature__image, .feature__info {
   width: 50%;
-}
-.feature__info {
-  padding-left: 10rem;
 }
 .feature__title {
   font-size: 4rem;
@@ -216,6 +223,94 @@ img {
   margin-bottom: 3rem;
   text-decoration: underline;
   font-size: 1.6rem;
+  padding-left: 3rem;
+}
+.feature-intro__item--circle {
+  text-decoration: none;
+  position: relative;
+}
+.feature-intro__item--circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4rem;
+  background-color: #5bcaee;
+  transform: translateY(-50%);
+}
+.feature-intro__item--circle:nth-child(2)::before {
+  background-color: #e3f3f6;
+}
+.feature-intro__item--circle:nth-child(3)::before {
+  background-color: #aed136;
+}
+.feature-intro__item--circle:last-child::before {
+  background-color: #c5e8ed;
+}
+.feature-best__icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 4px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #5bcaee;
+  position: relative;
+  z-index: 1;
+}
+.feature-best__icon--color2 {
+  color: #51909b;
+}
+.feature-best__icon--color3 {
+  color: #aed136;
+}
+.feature-best__icon--color4 {
+  color: #811257;
+}
+.feature-best__icon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: currentColor;
+  opacity: 0.25;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.feature-best__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.feature-best__desc {
+  font-weight: 300;
+}
+.feature-best__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -5rem;
+}
+.feature-best__item {
+  width: calc(50% - 3rem);
+  margin-bottom: 5rem;
+}
+
+.text-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-clamp--2 {
+  -webkit-line-clamp: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
